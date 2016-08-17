@@ -1,7 +1,7 @@
 <?php
 
-$Bilderordner = "";//Ordner in dem sich die Bilder befinden
-$webordner = "";   //Pfad ueber den der Ordner uebers Web erreichbar ist
+$Bilderordner = "/home/pi/www/serienbilder/";//Ordner in dem sich die Bilder befinden
+$webordner = "/serienbilder/";
 $html = "";
 
 if(isset($_GET["album"])){
@@ -28,7 +28,9 @@ foreach($elemente as $e){
                 }
         }
 }
-echo '<a href="http://'. $_SERVER['SERVER_ADDR'].'/">Home</a><hr>';
+# Header:
+echo "<html>\n<header>\n<title>Galerie</title>\n</header>\n<body>\n";
+echo '<br/><a href="http://'. $_SERVER['SERVER_ADDR'].'/" style="color: blue; font-size: 4.2em; text-decoration: none; padding: 1em; text-shadow: 1px 2px 5px #0055ff;">Home</a><br/><br/><br/><hr><br/>';
 echo $html;
-#Source: https://github.com/ursinn/Bilder-Galerie
+echo "\n<!-- Quelle: https://github.com/ursinn/Bilder-Galerie -->\n<body>\n<html>\n";
 ?>
