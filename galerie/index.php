@@ -1,7 +1,7 @@
 <?php
 
-$Bilderordner = "/home/pi/www/serienbilder/";//Ordner in dem sich die Bilder befinden
-$webordner = "/serienbilder/";
+$Bilderordner = "";//Ordner in dem sich die Bilder befinden
+$webordner = "";
 $html = "";
 
 if(isset($_GET["album"])){
